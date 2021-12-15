@@ -18,6 +18,20 @@ public class Usuario {
 
 	private boolean admin;
 
+	public Usuario() {
+	}
+
+	public Usuario(String login, String senha, boolean admin) {
+		this.login = login;
+		this.senha = senha;
+		this.admin = admin;
+	}
+
+	public Usuario(String login, String senha) {
+		this.login = login;
+		this.senha = senha;
+	}
+
 	public Long getId() {
 		return id;
 	}

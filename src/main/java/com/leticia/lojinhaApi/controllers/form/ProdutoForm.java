@@ -52,7 +52,7 @@ public class ProdutoForm {
 	}
 
 	public Produto atualizar(Long id, ProdutoRepository produtoRepository) {
-		Produto produto = produtoRepository.getOne(id);
+		Produto produto = produtoRepository.getById(id);
 		produto.setNome(this.nome);
 		produto.setValor(this.valor);
 		produto.setDescricao(this.descricao);
