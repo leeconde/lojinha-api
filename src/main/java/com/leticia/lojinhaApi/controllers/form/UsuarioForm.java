@@ -16,6 +16,8 @@ public class UsuarioForm {
 	@NotEmpty
 	private String senha;
 
+	private boolean admin;
+
 	public String getLogin() {
 		return login;
 	}
@@ -33,7 +35,7 @@ public class UsuarioForm {
 	}
 
 	public Usuario converter(UsuarioRepository repository) {
-		Usuario usuario = repository.findByLogin(getLogin());
+		Usuario usuario = repository.findOneByLogin(getLogin());
 		return new Usuario(login, senha);
 	}
 
